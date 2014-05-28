@@ -1,5 +1,5 @@
 package it.uniroma3.model;
-
+//togli il commento
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
