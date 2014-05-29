@@ -14,7 +14,7 @@
 		<h1>Progetto-1-2014</h1>
 		<ul>
 			<li><h:form>
-					<h:commandLink action="#{productController.listProducts}"
+					<h:commandLink action="#{prodottoController.listProdotti}"
 						value="Catalogo prodotti" />
 				</h:form></li>
 		</ul>
