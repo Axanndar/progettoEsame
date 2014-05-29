@@ -5,7 +5,7 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.List;
-
+//ciao
 @Stateless
 public class ProductFacade {
 	
