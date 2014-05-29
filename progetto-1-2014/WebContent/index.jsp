@@ -13,6 +13,8 @@
 	<f:view>
 		<h1>Progetto-1-2014</h1>
 		<ul>
+		<li><a href='<c:url value="/faces/nuovoProdotto.jsp" />'>Inserisci
+					prodotto</a></li>
 			<li><h:form>
 					<h:commandLink action="#{prodottoController.listProdotti}"
 						value="Catalogo prodotti" />
