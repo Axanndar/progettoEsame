@@ -13,6 +13,7 @@ import javax.faces.bean.ManagedProperty;
 @ManagedBean
 public class ProdottoController {
 	
+	
 	@ManagedProperty(value="#{param.id}")
 	private Long id;
 	private String nome;
