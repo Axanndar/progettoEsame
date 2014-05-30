@@ -10,7 +10,7 @@ import java.util.List;
 public class ProdottoFacade {
 	
     @PersistenceContext(unitName = "unit-progetto-1-2014")
-    private EntityManager  em;
+    private EntityManager em;
     
 	public Prodotto createProduct(String nome, String codice, Float prezzo, String descrizione) {
 		Prodotto prodotto = new Prodotto(nome, prezzo, descrizione, codice);
