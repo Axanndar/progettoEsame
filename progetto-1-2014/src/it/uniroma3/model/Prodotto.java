@@ -1,11 +1,8 @@
 package it.uniroma3.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-import javax.persistence.Column;
+import java.util.List;
+import javax.persistence.*;
+
 
 	@Entity
 	@NamedQuery(name = "findAllProdotti", query = "SELECT p FROM Prodotto p")
@@ -19,12 +16,16 @@ import javax.persistence.Column;
 	private String nome;
 
 	private Float prezzo;
+	
 	@Column(length = 2000)
-
-	private String descrizione;
+    private String descrizione;
 
 	@Column(nullable = false)
 	private String codice;
+	
+	@ManyToMany(mappedBy= "prodotti")
+	private List<Fornitore> fornitori;
+	
 	
 	public Prodotto() {
     }
@@ -74,14 +75,14 @@ import javax.persistence.Column;
         this.prezzo = prezzo;
     }
 	
-    public boolean equals(Object obj) {
-        Prodotto prodotto = (Prodotto)obj;
-        return this.getCodice().equals(prodotto.getCodice());
-    }
+	public boolean equals(Object obj) {
+		Prodotto prodotto = (Prodotto) obj;
+		return this.getCodice().equals(prodotto.getCodice());
+	}
 
-    public int hashCode() {
-         return this.codice.hashCode();
-    }
+	public int hashCode() {
+		return this.codice.hashCode();
+	}
 
 	public void setId(Long id) {
 		this.id = id;
